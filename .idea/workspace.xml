@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ea6f90-3430-4690-8904-9cc20e969d03" name="Changes" comment="create dev branch">
-      <change afterPath="$PROJECT_DIR$/src/public/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/image/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/homeController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routers/web.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configs/viewEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/viewEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712389490169</updated>
       <workItem from="1712389491338" duration="5793000" />
-      <workItem from="1712395833373" duration="3979000" />
+      <workItem from="1712395833373" duration="5675000" />
     </task>
     <task id="LOCAL-00001" summary="create dev branch">
       <option name="closed" value="true" />
