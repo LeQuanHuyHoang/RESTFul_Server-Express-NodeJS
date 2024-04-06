@@ -1,10 +1,15 @@
 const express = require('express')
+const path = require('path')
+const configViewEngine = require('./configs/viewEngine')
 
 const app =  express()
 const port = 8080
 
+//config view engine
+configViewEngine(app)
+
 app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.render('index.ejs')
 })
 
 app.listen(port, () => {
