@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ea6f90-3430-4690-8904-9cc20e969d03" name="Changes" comment="create dev branch">
-      <change afterPath="$PROJECT_DIR$/src/controller/homeController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/web.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configs/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/CRUDService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,9 @@
         <option name="url" value="https://github.com/LeQuanHuyHoang/RESTFul_Server-Express-NodeJS.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -91,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712389490169</updated>
       <workItem from="1712389491338" duration="5793000" />
-      <workItem from="1712395833373" duration="5675000" />
+      <workItem from="1712395833373" duration="6948000" />
+      <workItem from="1712561234531" duration="3051000" />
     </task>
     <task id="LOCAL-00001" summary="create dev branch">
       <option name="closed" value="true" />
@@ -121,5 +128,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create dev branch" />
     <option name="LAST_COMMIT_MESSAGE" value="create dev branch" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/controller/homeController.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
