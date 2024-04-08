@@ -5,7 +5,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href = "/css/styles.css">
-    <title>Home Page</title>
+    <title>Detail</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <li><a href="/create">Create User</a></li>
 </ul>
 
-<h1>List user</h1>
+<h1>Detail user</h1>
 
 <table id="customers">
     <tr>
@@ -22,25 +22,13 @@
         <th>Email</th>
         <th>Name</th>
         <th>City</th>
-        <th>Action</th>
     </tr>
-    <% listUser.forEach(function (user)  { %>
         <tr>
-            <td><%= user.id %></td>
-            <td><%= user.email %></td>
-            <td><%= user.name %></td>
-            <td><%= user.city %></td>
-            <td>
-                <a href="/detail/user/<%= user.id %>">Detail</a>
-                <a href="/update/user/<%= user.id %>">Edit</a>
-
-                <form action="/delete/user/<%= user.id %>" method="GET">
-                    <button>Delete</button>
-                </form>
-
-            </td>
+            <td><%= userDetail.id %></td>
+            <td><%= userDetail.email %></td>
+            <td><%= userDetail.name %></td>
+            <td><%= userDetail.city %></td>
         </tr>
-    <% } ) %>
 </table>
 
 </body>

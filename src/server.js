@@ -9,9 +9,11 @@ const port = process.env.PORT || 8080
 //config view engine
 configViewEngine(app)
 
-//config static file
+//config req.body
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-
+//config route
 app.use('/', webRouter)
 
 app.listen(port, () => {
