@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href = "/css/styles.css">
+    <title>Upload file</title>
+</head>
+
+<body>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/create">Create User</a></li>
+    <li><a class="active" href="/upload">Upload file</a></li>
+</ul>
+
+<h1>Upload file</h1>
+
+<div class="upload-file-container">
+    <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+       <div>
+        <label>Avatar:</label>
+        <input type="file" name="profile-pic">
+       </div>
+        <div>
+            <button class='btn-save' type="submit" name="btn-upload-file">Save file</button>
+        </div>
+    </form>
+</div>
+
+<div class="upload-file-container">
+    <form method="POST" action="/upload-multiple-pic" enctype="multipart/form-data">
+        <div>
+            <label>Picture:</label>
+            <input type="file" name="multiple-profile-pic" multiple>
+        </div>
+        <div>
+            <button class='btn-save' type="submit" name="btn-upload-multiple-file">Save file</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

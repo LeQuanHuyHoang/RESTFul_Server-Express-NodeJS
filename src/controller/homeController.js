@@ -1,5 +1,5 @@
 const CRUDSer = require('../services/CRUDService')
-const {stringify} = require("nodemon/lib/utils");
+const multer = require('multer')
 
 const getHomePage = async (req, res) => {
     let result = await CRUDSer.getListUser()
@@ -46,6 +46,39 @@ const updateUser = async (req,res) => {
     return res.redirect('/')
 }
 
+const getUploadFilePage = async (req, res) => {
+    return res.render('uploadFile.ejs')
+}
+
+const hanldeUploadFile = async (req,res) => {
+    const upload = multer().single('profile-pic')
+    console.log(req.file)
+    upload(req,res, function (err) {
+        if (req.fileValidationError) {
+            return res.send(req.fileValidationError)
+        }
+        else if (!req.file) {
+            return res.send('Please select an image to upload')
+        }
+        else if (err instanceof multer.MulterError) {
+            console.log("1",err)
+            return res.send(err)
+
+        }
+        else if (err) {
+            console.log("2",err)
+            return res.send(err)
+
+        }
+
+        res.send(`You have uploaded this image: <hr/><img src="/image/${req.file.filename}" width="500"><hr /><a href="/upload">Upload another image</a>`)
+    })
+}
+
+const handleUploadMultipleFile = async (req, res) => {
+
+}
+
 module.exports = {
     getHomePage,
     getCreatePage,
@@ -54,5 +87,8 @@ module.exports = {
     getDeletePage,
     deleteUser,
     getUpdatePage,
-    updateUser
+    updateUser,
+    getUploadFilePage,
+    hanldeUploadFile,
+    handleUploadMultipleFile
 }
