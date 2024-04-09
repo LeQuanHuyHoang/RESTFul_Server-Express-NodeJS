@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ea6f90-3430-4690-8904-9cc20e969d03" name="Changes" comment="create dev branch">
-      <change afterPath="$PROJECT_DIR$/src/views/create.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/delete.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/detail.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/update.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/APIController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routers/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configs/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/homeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routers/web.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/web.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/CRUDService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CRUDService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Wieee/Work/RESTFul_Server-Express-NodeJS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Wieee\\Work\\Tools\\WebStorm 2023.3.6\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Wieee/Work/RESTFul_Server-Express-NodeJS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Wieee\\Work\\Tools\\WebStorm 2023.3.6\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Wieee\Work\RESTFul_Server-Express-NodeJS\src\public\image" />
@@ -104,7 +97,8 @@
       <updated>1712389490169</updated>
       <workItem from="1712389491338" duration="5793000" />
       <workItem from="1712395833373" duration="6948000" />
-      <workItem from="1712561234531" duration="17138000" />
+      <workItem from="1712561234531" duration="17331000" />
+      <workItem from="1712651044620" duration="4138000" />
     </task>
     <task id="LOCAL-00001" summary="create dev branch">
       <option name="closed" value="true" />
@@ -140,7 +134,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/controller/homeController.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

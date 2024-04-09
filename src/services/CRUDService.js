@@ -12,7 +12,7 @@ const getUserById = async (userId) => {
 }
 
 const createUser = async (user) => {
-    let[result] = await conn.query('insert into User (email, name, city) values (?, ?, ?)',[user.email, user.myname, user.city])
+    let[result] = await conn.query('insert into User (email, name, city) values (?, ?, ?)',[user.email, user.name, user.city])
     return result
 }
 
@@ -22,7 +22,7 @@ const deleteUserById= async (userId)  => {
 
 const updateUser = async (user) => {
     let email = user.email;
-    let name = user.myname;
+    let name = user.name;
     let city = user.city;
     let userId = user.id;
     await conn.query('UPDATE User SET email = ?, name = ?, city = ? WHERE id = ?', [email, name, city, userId])
