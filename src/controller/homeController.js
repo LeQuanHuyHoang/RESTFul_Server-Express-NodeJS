@@ -1,5 +1,6 @@
 const CRUDSer = require('../services/CRUDService')
 const multer = require('multer')
+const utils = require("../utils/comon");
 
 const getHomePage = async (req, res) => {
     let result = await CRUDSer.getListUser()
@@ -50,9 +51,10 @@ const getUploadFilePage = async (req, res) => {
     return res.render('uploadFile.ejs')
 }
 
+
+
 const hanldeUploadFile = async (req,res) => {
-    const upload = multer().single('profile-pic')
-    console.log(req.file)
+const upload = utils.upload.single('profile-pic')
     upload(req,res, function (err) {
         if (req.fileValidationError) {
             return res.send(req.fileValidationError)
@@ -61,12 +63,9 @@ const hanldeUploadFile = async (req,res) => {
             return res.send('Please select an image to upload')
         }
         else if (err instanceof multer.MulterError) {
-            console.log("1",err)
             return res.send(err)
-
         }
         else if (err) {
-            console.log("2",err)
             return res.send(err)
 
         }

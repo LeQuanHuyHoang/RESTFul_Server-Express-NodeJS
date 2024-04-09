@@ -3,6 +3,7 @@ const router = express.Router()
 const homeController = require('../controller/homeController')
 const utils = require('../utils/comon')
 
+
 router.get('/',  homeController.getHomePage)
 router.get('/create', homeController.getCreatePage)
 router.get('/detail/user/:id', homeController.getDetailPage)
@@ -12,6 +13,6 @@ router.get('/delete/user/:id', homeController.getDeletePage)
 router.get('/update/user/:id', homeController.getUpdatePage)
 router.post('/update', homeController.updateUser)
 router.get('/upload', homeController.getUploadFilePage)
-router.post('/upload-profile-pic', utils.upload.single('profile-pic') ,homeController.hanldeUploadFile)
+router.post('/upload-profile-pic', utils.upload.single('profile-pic'),homeController.hanldeUploadFile)
 router.post('/upload-multiple-pic', homeController.handleUploadMultipleFile)
 module.exports = router

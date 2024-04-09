@@ -3,6 +3,7 @@ const appRoot = require('app-root-path')
 const path = require('path')
 
 const storage = multer.diskStorage({
+
     destination: function (req, file, cb) {
         cb(null, appRoot + '/src/public/image/')
     },
@@ -10,9 +11,7 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
-
 const imageFilter = function(req, file, cb) {
-    // Accept images only
     if (!file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
         req.fileValidationError = 'Only image files are allowed!'
         return cb(new Error('Only image files are allowed!'), false)
@@ -20,7 +19,7 @@ const imageFilter = function(req, file, cb) {
     cb(null, true);
 }
 
-let upload = multer({storage:storage, filename:imageFilter})
+let upload = multer({storage:storage, fileFilter:imageFilter})
 
 module.exports ={
     storage,
