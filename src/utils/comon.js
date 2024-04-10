@@ -20,9 +20,26 @@ const imageFilter = function(req, file, cb) {
 }
 
 let upload = multer({storage:storage, fileFilter:imageFilter})
+let uploadMultiple = multer({storage:storage, fileFilter:imageFilter}).array('multiple-profile-pic',3)
+const errLimitFile = function (req ,res, next)  {
+        uploadMultiple(req, res, (err) => {
+            if (req.fileValidationError) {
+                return res.send(req.fileValidationError)
+            }
+            else if (err instanceof multer.MulterError && err.code === "LIMIT_UNEXPECTED_FILE") {
+                // handle multer file limit error here
+                res.send('LIMIT_UNEXPECTED_FILE')
+            } else if (err) {
+                res.send(err)
+            }
+            else {
+                next();
+            }
+        })
+}
 
 module.exports ={
-    storage,
-    imageFilter,
-    upload
+    upload,
+    uploadMultiple,
+    errLimitFile
 }

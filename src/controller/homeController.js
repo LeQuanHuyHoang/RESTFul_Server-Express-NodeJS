@@ -1,6 +1,7 @@
 const CRUDSer = require('../services/CRUDService')
 const multer = require('multer')
 const utils = require("../utils/comon");
+const {uploadMultiple} = require("../utils/comon");
 
 const getHomePage = async (req, res) => {
     let result = await CRUDSer.getListUser()
@@ -47,37 +48,39 @@ const updateUser = async (req,res) => {
     return res.redirect('/')
 }
 
-const getUploadFilePage = async (req, res) => {
+const getUploadFilePage = (req, res) => {
     return res.render('uploadFile.ejs')
 }
 
-
-
-const hanldeUploadFile = async (req,res) => {
-const upload = utils.upload.single('profile-pic')
-    upload(req,res, function (err) {
+const handleUploadFile =  (req,res) => {
         if (req.fileValidationError) {
             return res.send(req.fileValidationError)
         }
         else if (!req.file) {
             return res.send('Please select an image to upload')
         }
-        else if (err instanceof multer.MulterError) {
-            return res.send(err)
-        }
-        else if (err) {
-            return res.send(err)
-
-        }
 
         res.send(`You have uploaded this image: <hr/><img src="/image/${req.file.filename}" width="500"><hr /><a href="/upload">Upload another image</a>`)
-    })
+
 }
 
 const handleUploadMultipleFile = async (req, res) => {
 
-}
+    if (req.files.length == 0) {
+            return res.send('Please select an image to upload')
+        }
 
+        let result = "You have uploaded these images: <hr />"
+        const files = req.files
+        let index, len
+
+        // Loop through all the uploaded images and display them on frontend
+        for (index = 0, len = files.length; index < len; ++index) {
+            result += `<img src="/image/${files[index].filename}" width="300">`
+        }
+        result += '<hr/><a href="/upload">Upload more images</a>'
+        res.send(result)
+}
 module.exports = {
     getHomePage,
     getCreatePage,
@@ -88,6 +91,6 @@ module.exports = {
     getUpdatePage,
     updateUser,
     getUploadFilePage,
-    hanldeUploadFile,
+    handleUploadFile,
     handleUploadMultipleFile
 }
