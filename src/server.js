@@ -4,11 +4,16 @@ const path = require('path')
 const configViewEngine = require('./configs/viewEngine')
 const webRouter = require('./routers/web')
 const APIRouter = require('./routers/api')
+const morgan = require('morgan')
+
 const app =  express()
 const port = process.env.PORT || 8080
 
 //config view engine
 configViewEngine(app)
+
+//logging middleware
+app.use(morgan('combined'))
 
 //config req.body
 app.use(express.json())
